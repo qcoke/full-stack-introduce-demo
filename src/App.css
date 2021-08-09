@@ -1,5 +1,8 @@
 @import "~antd/dist/antd.css";
 
+@import "@ant-design/pro-table/dist/table.css";
+@import "@ant-design/pro-layout/dist/layout.css";
+
 html,
 body,
 #root {
@@ -36,4 +39,16 @@ body,
   height: 100%;
   padding: 20px;
   box-sizing: border-box;
+}
+
+#wapper {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+.ant-pro-basicLayout {
+  height: 100vh;
+  overflow: hidden;
 }

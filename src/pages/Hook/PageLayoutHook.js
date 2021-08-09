@@ -1,18 +1,21 @@
 import React from 'react'
-import { useState } from 'react'
+import ProLayout, { PageContainer } from '@ant-design/pro-layout';
+import router from "../../config/router"
 
 const PageLayoutHook = () => {
-  const [users, setUsers] = useState([]);
-  fetch('/api/users').then(resp => resp.json()).then(res => {
-    setUsers(res.data)
-  })
   return (
-    <div>
-      PageLayoutHook：
-      <hr/>
-      {users.map((item) => 
-        <p key={item.key}>{item.name}</p>
-      )}
+    <div id="wapper">
+      <ProLayout
+        {...router}
+        title="Ant Design Pro"
+        siderWidth="220px"
+        fixSiderbar={true}
+        fixedHeader={true}
+      >
+        <PageContainer header="" title="Demo" content="欢迎使用">
+          
+        </PageContainer>
+      </ProLayout>
     </div>
   )
 }
