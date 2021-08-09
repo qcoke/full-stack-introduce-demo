@@ -1,6 +1,8 @@
-@import '~antd/dist/antd.css';
+@import "~antd/dist/antd.css";
 
-html,body,#root {
+html,
+body,
+#root {
   height: 100vh;
   overflow: hidden;
 }
@@ -24,6 +26,14 @@ html,body,#root {
 .site-layout-background {
   background: #fff;
 }
-  [data-theme="dark"] .site-layout-sub-header-background {
-    background: #141414;
-  }
+[data-theme="dark"] .site-layout-sub-header-background {
+  background: #141414;
+}
+
+.right-content {
+  box-shadow: 0 0 10px 2px #eee;
+  background: #fff;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
