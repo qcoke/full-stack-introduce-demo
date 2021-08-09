@@ -1,10 +1,9 @@
-import MainClass from "./pages/MainClass/MainClass";
+import PageLayout from "./pages/MainClass/PageLayout";
 import './App.css';
-
 
 function App() {
   return (
-    <MainClass />
+    <PageLayout />
   )
 }
 
