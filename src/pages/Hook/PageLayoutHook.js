@@ -29,8 +29,6 @@ function getMenu() {
   return menuData
 }
 const PageLayoutHook = (props) => {
-  const {children, location = {pathname: '/'}} = props;
-
   return (
     <div id="wapper">
       <ProLayout
@@ -44,21 +42,10 @@ const PageLayoutHook = (props) => {
         menuItemRender={(item, dom) => (
           <Link to={item.path}>{dom}</Link>
         )}
-        itemRender={(route, params, routes, paths) => {
-          const first = routes.indexOf(route) === 0;
-          return first ? (
-            <Link to={paths.join('/')}>{route.breadcrumbName}</Link>
-          ) : (
-            <span>{route.breadcrumbName}</span>
-          );
-        }}
       >
-        <PageContainer 
-          title="我是标题"
-          content = {() => {
-            return <div>Hello</div>
-          }}
-        ></PageContainer>
+       <ProLayout navTheme="light" menuHeaderRender={false} {...props}>
+        <PageContainer content="欢迎您的使用">{props.children}</PageContainer>
+      </ProLayout>
       </ProLayout>
     </div>
   )
